@@ -1,11 +1,11 @@
-public class pitsGregoryNieto{
+public class PitsGregoryNieto{
 
 	public static void main(String[] args){
-		string mechanic1 = "Quita llanta 1 y pone llanta nueva";
-		string mechanic2 = "Quita llanta 2 y pone llanta nueva";
-		string mechanic3 = "Quita llanta 3 y pone llanta nueva";
-		string mechanic4 = "Quita llanta 4 y pone llanta nueva";		
-		string mechanic5 = "Tanquea el vehiculo";	
+		String mechanic1 = "Mecánico 1 Quita llanta 1 y pone llanta nueva";
+		String mechanic2 = "Mecánico 2 Quita llanta 2 y pone llanta nueva";
+		String mechanic3 = "Mecánico 3 Quita llanta 3 y pone llanta nueva";
+		String mechanic4 = "Mecánico 4 Quita llanta 4 y pone llanta nueva";		
+		String mechanic5 = "Mecánico 5 Tanquea el vehiculo";	
 		
 		System.out.println(mechanic1);
 		System.out.println(mechanic2);
