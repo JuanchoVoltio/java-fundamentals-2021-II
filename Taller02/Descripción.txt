@@ -1,0 +1,3 @@
+Taller 02
+
+Dadas las longitudes de los lados de un triángulo, imprimir en pantalla qué tipo de triángulo es.

@@ -14,12 +14,8 @@ public class EjemploIf{
 
 		if(isALargeVenue){
 			System.out.println("El salón es grande");
-		}else if(){
-			System.out.println("El salón no es grande");
-		}else if(){
-			
 		}else{
-			
+			System.out.println("El salón no es grande");
 		}
 	}
 
