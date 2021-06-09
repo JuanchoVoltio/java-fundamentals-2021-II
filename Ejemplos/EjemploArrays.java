@@ -3,17 +3,37 @@
 	varias líneas
 */
 
-public class EjemploArrays{
+public class ArraysGregoryNieto{
 
 
 	public static void main(String[] args){
-		int[] ages = {10, 15, 9, 13};
-		//printArray(ages);
+		int[] ages = {10, 15, 6, 13};
+		String[] names = {"José", "Juan", "Cenidier", "Jeison", "Diego", "William", "Henry"};
+		String[] cities = {"Bogotá", "Santo Domingo", "Buenos Aires", "Londres", "Oslo"};
+		printArray(ages);
 		
 		ages[0] = 11;
 
-		//printArray(ages);
-		findElement(ages, 15);
+		printArray(ages);
+		printNegativeIndexElement(names, -7);
+		printNegativeIndexElement(cities, -7);
+	}
+
+
+	public static void printLastElement(String[] array){
+		int lastIndex = array.length - 1;
+		System.out.println(array[lastIndex]);
+	}
+
+	public static void printFirstElement(String[] array){
+		System.out.println(array[0]);
+	}
+
+
+	//TODO: [1] Hacer segura esta función usando condicionales
+	public static void printNegativeIndexElement(String[] array, int negativeIndex){
+		int index = array.length + negativeIndex;
+		System.out.println(array[index]);
 	}
 
 	public static void printArray(int[] array){
@@ -38,9 +58,24 @@ public class EjemploArrays{
 	}
 
 	//TODO: Agregar una función que indique si hay un número negativo en el arreglo
+	public static void findNegative(int[] number){
+		int iterations = 0;
 
-	public static void findNegative(){
+		printArray(number);
 		
+		for(int current : number){
+			iterations++;
+			if(current < 0){
+			   	System.out.println(current + " founded!");
+			   	break;
+			}		
+		}
+		
+		if(iterations == number.length){
+			System.out.println("all positive");
+		}
 	}
+
+	//TODO: [2] Hacer una función que dado un arreglo de números enteros, calcule el promedio de esos números
 
 }
