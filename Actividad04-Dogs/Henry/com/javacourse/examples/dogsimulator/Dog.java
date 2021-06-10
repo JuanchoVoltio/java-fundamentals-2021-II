@@ -11,5 +11,6 @@ package com.javacourse.examples.dogsimulator;
  */
 public class Dog {
     String name;
+    int age;
     
 }
