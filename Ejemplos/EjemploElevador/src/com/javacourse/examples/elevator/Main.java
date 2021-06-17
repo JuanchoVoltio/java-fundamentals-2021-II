@@ -16,13 +16,17 @@ public class Main {
 //        myElevator.openDoor();
 
 
-		Building myBuilding = new Building();
+		Building myBuilding = new Building(50, 1);
 		myBuilding.name = "Torre Colpatria";
+		Building anotherBuilding = new Building(36, 0);
+		anotherBuilding.name = "Edificio Tequendama";
+
+		anotherBuilding.elevators[0].goUp(anotherBuilding.MAX_LEVEL);
 
 		//Gregory va a subir usando el primer ascensor
 		myBuilding.elevators[0].openDoor();
 		myBuilding.elevators[0].closeDoor();
-		myBuilding.elevators[0].goUp();
+		myBuilding.elevators[0].goUp(myBuilding.MAX_LEVEL);
 		myBuilding.elevators[0].openDoor();
 
 		System.out.println("-------------------");
@@ -31,8 +35,9 @@ public class Main {
 		myBuilding.elevators[2].currentLevel = 48;
 		myBuilding.elevators[2].openDoor();
 		myBuilding.elevators[2].closeDoor();
-		myBuilding.elevators[2].goDown();
-		myBuilding.elevators[2].goDown();
+		myBuilding.elevators[3].goTo(46);
+//		myBuilding.elevators[2].goDown(myBuilding.MIN_LEVEL);
+//		myBuilding.elevators[2].goDown(myBuilding.MIN_LEVEL);
 		myBuilding.elevators[2].openDoor();
 
 		System.out.println("======================");

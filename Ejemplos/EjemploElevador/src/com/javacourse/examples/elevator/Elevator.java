@@ -1,15 +1,19 @@
 package com.javacourse.examples.elevator;
 
 public class Elevator {
-    public final int MAX_LEVEL = 50;
-    public int min_level = 1; //TODO: Volver constante este atributo
+
     public int currentLevel;
     public boolean doorOpen;
 
-    public void goUp(){
+    public Elevator(int currentLevel){
+        this.currentLevel = currentLevel;
+        this.doorOpen = doorOpen;
+    }
+
+    public void goUp(int maxLevel){
         System.out.println("Going up....");
         if(!doorOpen){
-            if(currentLevel < MAX_LEVEL) {
+            if(currentLevel < maxLevel) {
                 this.currentLevel++;
             }else{
                 System.out.println("[WARNING] - You're already in the highest level!");
@@ -20,10 +24,10 @@ public class Elevator {
         System.out.println("You're now in level " + currentLevel);
     }
 
-    public void goDown(){
+    public void goDown(int minLevel){
         System.out.println("Going down....");
         if(!doorOpen){
-            if(currentLevel > min_level) {
+            if(currentLevel > minLevel) {
                 this.currentLevel--;
             }else{
                 System.out.println("[WARNING] - You're already in the lowest level!");
@@ -44,6 +48,10 @@ public class Elevator {
         System.out.println("Closing the door....");
         this.doorOpen = false;
         System.out.println("Now the door is closed");
+    }
+
+    public void goTo(int level){
+        //TODO: Implementar este método. Pistas: Usar ciclos
     }
 
 }
