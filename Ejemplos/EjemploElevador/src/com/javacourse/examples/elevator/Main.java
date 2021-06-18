@@ -21,24 +21,38 @@ public class Main {
 		Building anotherBuilding = new Building(36, 0);
 		anotherBuilding.name = "Edificio Tequendama";
 
-		anotherBuilding.elevators[0].goUp(anotherBuilding.MAX_LEVEL);
+//		anotherBuilding.elevators[0].goUp(anotherBuilding.MAX_LEVEL);
 
 		//Gregory va a subir usando el primer ascensor
-		myBuilding.elevators[0].openDoor();
-		myBuilding.elevators[0].closeDoor();
-		myBuilding.elevators[0].goUp(myBuilding.MAX_LEVEL);
-		myBuilding.elevators[0].openDoor();
+//		myBuilding.elevators[0].openDoor();
+//		myBuilding.elevators[0].closeDoor();
+//		myBuilding.elevators[0].goUp(myBuilding.MAX_LEVEL);
+//		myBuilding.elevators[0].openDoor();
 
-		System.out.println("-------------------");
+		System.out.println("---------------- COLPATRIA ----------------");
 
 		//Gabriel va a bajar usando el tercer ascensor
-		myBuilding.elevators[2].currentLevel = 48;
+		myBuilding.elevators[2].currentLevel = 50;
 		myBuilding.elevators[2].openDoor();
 		myBuilding.elevators[2].closeDoor();
-		myBuilding.elevators[3].goTo(46);
-//		myBuilding.elevators[2].goDown(myBuilding.MIN_LEVEL);
-//		myBuilding.elevators[2].goDown(myBuilding.MIN_LEVEL);
+		//myBuilding.elevators[2].goTo(46, myBuilding.MAX_LEVEL, myBuilding.MIN_LEVEL);
+		myBuilding.elevators[2].goDown(myBuilding.MIN_LEVEL);
+		myBuilding.elevators[2].goDown(myBuilding.MIN_LEVEL);
+		myBuilding.elevators[2].goDown(myBuilding.MIN_LEVEL);
+		myBuilding.elevators[2].goDown(myBuilding.MIN_LEVEL);
 		myBuilding.elevators[2].openDoor();
+
+
+		System.out.println("---------------- TEQUENDAMA ----------------");
+
+		//Cenidier va a subir usando el primer ascensor del edificio
+		String response = anotherBuilding.elevators[0].setCurrentLevel(15, anotherBuilding.MAX_LEVEL, anotherBuilding.MIN_LEVEL);
+		if(response.equals("OK")) {
+			anotherBuilding.elevators[0].goTo(anotherBuilding.MAX_LEVEL - 4, anotherBuilding.MAX_LEVEL, anotherBuilding.MIN_LEVEL);
+		}else{
+			System.out.println("[ERROR] - Current floor not valid");
+		}
+
 
 		System.out.println("======================");
 		System.out.println("Elevator 1 is in level " + myBuilding.elevators[0].currentLevel);

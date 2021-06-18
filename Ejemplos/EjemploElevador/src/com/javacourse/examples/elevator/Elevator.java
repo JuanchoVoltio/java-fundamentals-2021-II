@@ -50,8 +50,25 @@ public class Elevator {
         System.out.println("Now the door is closed");
     }
 
-    public void goTo(int level){
-        //TODO: Implementar este método. Pistas: Usar ciclos
+    public void goTo(int level, int maxLevel, int minLevel){
+        while(currentLevel != level){
+            if(currentLevel < level){
+                this.goUp(maxLevel);
+            }else{
+                this.goDown(minLevel);
+            }
+        }
+    }
+
+    public String setCurrentLevel(int level, int maxLevel, int minLevel){
+        String response = "NOT OK";
+
+        if((level <= maxLevel) && (level >= minLevel)){
+            this.currentLevel = level;
+            response = "OK";
+        }
+
+        return response;
     }
 
 }
